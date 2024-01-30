@@ -15,8 +15,8 @@
             <div class="container">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarContent" aria-controls="navbarContent" 
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarContent">
@@ -35,14 +35,77 @@
                                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-danger" type="submit">Search</button>
-                        </form>
+                        <div class="d-flex">
+                            <button class="btn btn-outline-success me-3" type="submit" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Sign in</button>
+                            <button class="btn btn-outline-danger" type="submit">Sign out</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="row mb-3">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputPass" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="inputPass">
+                                </div>
+                            </div>
+                            <fieldset>
+                                <div class="row mb-3">
+                                    <legend class="col-form-label col-sm-2">Radio</legend>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input id="radios1" type="radio" class="form-check-input" name="radios"
+                                                value="option1" checked>
+                                            <label for="radios1" class="form-check-label">Radio 1</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="radios2" type="radio" class="form-check-input" name="radios"
+                                                value="option2">
+                                            <label for="radios2" class="form-check-label">Radio 2</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input id="radios3" type="radio" class="form-check-input" name="radios"
+                                                value="option3" disabled>
+                                            <label for="radios3" class="form-check-label">Radio 3</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-form-label col-sm-2">Checkbox</div>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input id="gridCheck" type="checkbox" class="form-check-input">
+                                            <label for="gridCheck" class="form-check-label">Save password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
 
@@ -59,11 +122,13 @@
                     <img src="img/useeffect.png" class="d-block w-100" alt="image3">
                 </div>
             </div>
-            <a href="#carouselControls" class="carousel-control-prev" data-bs-target="#carouselControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <a href="#carouselControls" class="carousel-control-prev" type="button" data-bs-target="#carouselControls"
+                role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </a>
-            <a href="#carouselControls" class="carousel-control-next" data-bs-target="#carouselControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <a href="#carouselControls" class="carousel-control-next" type="button" data-bs-target="#carouselControls"
+                role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
 
@@ -162,6 +227,59 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="container text-center">
+            <p>
+                <a href="#multiCollapse1" data-bs-toggle="collapse" aria-controls="multiCollapse1" role="button" aria-expanded="false" class="btn btn-secondary">Hello</a>
+                <button class="btn btn-secondary" type="button" data-bs-target="#multiCollapse2" 
+                        aria-expanded="false" aria-controls="multiCollapse2" aria-expanded="false" data-bs-toggle="collapse">World
+                </button>
+                <button class="btn btn-secondary" type="button" data-bs-target=".multi-collapse" 
+                        aria-expanded="false" aria-controls="multiCollapse1 multiCollapse2" aria-expanded="false" data-bs-toggle="collapse">Hello World
+                </button>
+            </p>
+            <div class="row">
+                <div class="col">
+                    <div id="multiCollapse1" class="collapse multi-collapse show">
+                        <div class="card card-body">
+                            <img class="w-100" src="img/pexels-pixabay-1.jpg" alt="pexels-pixabay">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="multiCollapse2" class="collapse multi-collapse show">
+                        <div class="card card-body">
+                            <img class="w-100" src="img/pexels-johannes-plenio-2.jpg" alt="pexels-johannes-plenio">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="multiCollapse1" class="collapse multi-collapse show">
+                        <div class="card card-body">
+                            <img class="w-100" src="img/pexels-pixabay-3.jpg" alt="pexels-pixabay">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div id="multiCollapse2" class="collapse multi-collapse show">
+                        <div class="card card-body">
+                            <img class="w-100" src="img/pexels-max-rahubovskiy-4.jpg" alt="pexels-max-rahubovskiy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="d-flex flex-column align-items-center">
+                <div class="p-5">web dev blog 1</div>
+                <div class="p-5">web dev blog 2</div>
+                <div class="p-5">web dev blog 3</div>
+            </div>
+        </div>
+
     </main>
 
 
